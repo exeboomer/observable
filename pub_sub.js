@@ -22,11 +22,11 @@ class Bus {
      * @return {undefined}
      */
     subscribe (room, handler) {
-        if(!Array.isArray(this.rooms[handler])){
-            this.rooms[handler] = [];
+        if(!Array.isArray(this.rooms[room])){
+            this.rooms[room] = [];
         }
         if(room in this.rooms){
-            this.rooms[handler].push(room);
+            this.rooms[room].push(handler);
         }
     }
 
